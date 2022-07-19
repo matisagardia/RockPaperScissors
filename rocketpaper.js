@@ -1,8 +1,9 @@
-
 // Declaro dos variables 0 para luego acumular resultados
 
 let userCount = 0;
 let computerCount = 0;
+
+
 
 // Funcion que tiene un ciclo que limita la cantidad de rondas
 
@@ -80,7 +81,7 @@ function game(){
     } else if (match() == userWin) {
       userCount++;
     }
-    
+
     console.log('User points:' + ' ' + userCount);
     console.log('Computer points:' + ' ' + computerCount);
 
