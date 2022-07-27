@@ -29,7 +29,7 @@ function playRound() {
 
   // Contador de rondas
 
-      if(totalRounds < 6) {
+      if(totalRounds < 5) {
 
 // Funcion que genera un valor aleatorio para la eleccion de la computadora
 
@@ -49,11 +49,8 @@ function playRound() {
 
       let computerChoice = getComputerChoice();
       let userWin = 'You won! ' + userChoice + ' beats ' + computerChoice + '!';
-      let computerWin = 'You lost! ' + computerChoice + 'beats ' + userChoice + '!';
+      let computerWin = 'You lost! ' + computerChoice + ' beats ' + userChoice + '!';
 
-    
-        console.log('The user choice was: ' + userChoice);
-        console.log('The computer choice was: ' + computerChoice);
 
 // Funcion que compara ambos valores y retorna la variable creada anteriormente dependiendo quien gana.       
 
@@ -77,13 +74,19 @@ function playRound() {
 
 // Sumador de rondas ganadas para quien corresponda usando las variables del comienzo.
 
+let currentWinner = document.getElementById('currentWinner');
+
     if(match() == computerWin){
+      currentWinner.textContent = computerWin;
       computerCount++;
     } else if (match() == userWin) {
+      currentWinner.textContent = userWin;
       userCount++;
+    } else if (match() == 'Tied!') {
+      currentWinner.textContent = 'Tied!';
     }
 
-// Muestro los resultados en pantalla
+// Muestro los resultados en pantalla y al llegar a 5 rondas finalizo el juego.
 
     let userScore = document.getElementById('userScore');
     let opponentScore = document.getElementById('opponentScore');
@@ -93,6 +96,8 @@ function playRound() {
     totalRounds++;
 
      
+    } else {
+      currentWinner.textContent = 'Game Over!';
     }
     }
 

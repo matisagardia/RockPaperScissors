@@ -2,19 +2,59 @@
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+    
+}
+
+body {
+    background: rgb(49, 49, 49);
+}
+
+h1 {
+    font-size: 46px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 300;
 }
 
 h1, h2{
     text-align: center;
     margin-bottom: 25px;
+    color: white;
+}
+
+.names {
+    font-size: 36px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    color: white;
+    font-weight: 300;
+}
+
+.score {
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 22px;
+}
+
+#currentWinner {
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 26px;
 }
 
 .playzone {
     height: 80vh;
-    width: 70vw;
+    width: 80vw;
     display: flex;
     justify-content: space-evenly;
     margin: auto;
+    margin-top: -330px;
 }
 
 .userPlayzone {
@@ -36,8 +76,9 @@ h1, h2{
 }
 
 .userButtons img, .opponentButtons img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    background: rgb(49, 49, 49);
 }
 
 .userButtons, .opponentButtons {
@@ -45,7 +86,17 @@ h1, h2{
     gap: 25px;
 }
 
+.userButtons button {
+    border-radius: 20%;
+    background-color: rgb(49, 49, 49);
+}
+
+.opponentButtons button {
+    border-radius: 20%;
+    background-color: rgb(49, 49, 49);
+}
+
 .opponentScore, .userScore {
     font-size: 82px;
-
+    color: white;
 }
