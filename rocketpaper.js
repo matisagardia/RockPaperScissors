@@ -4,30 +4,35 @@ let userCount = 0;
 let computerCount = 0;
 
 
-
-// Funcion que tiene un ciclo que limita la cantidad de rondas
-
-function game(){
-  
-
-    for (let index = 1; index < 6; index++) {
-
-      console.log('Round' + ' ' + index + '/' + '5');
-
 // Funcion que contiene el juego de una ronda
 
-    function playRound() {
+    
+// Traigo los valores del html (botones), los guardo en variables y espero el click en alguno. Una vez que tengo el evento, guardo el string correspondiente e inicio la partida.
 
-// Funcion que recibe la choice ingresada por el usuario a traves del prompt y valida el dato
+let userChoice = '';
 
-      function getUserChoice(choice) {
-        if (choice === 'rock' || choice === 'paper' || choice === 'scissors') {
-          return choice;
-        } else {
-          return 'Wrong input';
-        }
-      }
+const rock = document.querySelector('.rockButton');
+rock.addEventListener('click', e => {
+  userChoice = 'rock';
+  playRound();
+});
+const paper = document.querySelector('.paperButton');
+paper.addEventListener('click', e => {
+  userChoice = 'paper';
+  playRound();
+});
+const scissors = document.querySelector('.scissButton');
+scissors.addEventListener('click', e => {
+  userChoice = 'scissors';
+  playRound();
+});
 
+function playRound() {
+    
+      for (let index = 1; index < 6; index++) {
+      
+        console.log('Round' + ' ' + index + '/' + '5');
+        
 // Funcion que genera un valor aleatorio para la eleccion de la computadora
 
       function getComputerChoice() {
@@ -44,11 +49,9 @@ function game(){
 // Creo dos variables para almacenar los resultados de las funciones anteriores, tanto del ingreso del usuario como el random de la pc. 
 // Creo otras dos variables para almacenar los strings de los resultados, para luego poder usarlos en el contador de rondas ganadas por cada uno.
 
-
-      const userChoice = getUserChoice(prompt('Rock, paper or scissors?'));
-      const computerChoice = getComputerChoice();
-      let userWin = 'You won! Paper beats rock!';
-      let computerWin = 'You lost! Rock beats scissors!';
+      let computerChoice = getComputerChoice();
+      let userWin = 'You won! ' + userChoice + ' beats ' + computerChoice + '!';
+      let computerWin = 'You lost! ' + computerChoice + 'beats ' + userChoice + '!';
 
     
         console.log('The user choice was: ' + userChoice);
@@ -82,17 +85,17 @@ function game(){
       userCount++;
     }
 
-    console.log('User points:' + ' ' + userCount);
-    console.log('Computer points:' + ' ' + computerCount);
+// Muestro los resultados en pantalla
+
+    let userScore = document.getElementById('userScore');
+    let opponentScore = document.getElementById('opponentScore');
+    userScore.textContent = userCount;
+    opponentScore.textContent = computerCount;
 
     }
-
-    console.log(playRound())
   }
-}
 
-    console.log(game());
-
+ 
 
 
   

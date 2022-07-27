@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <title>Functions: Task 1</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+  <title>Rock-Paper-Scissors</title>
+</head>
 
-  <body>
+
+<body>
 
 
-  </body>
-  <script src="./rocketpaper.js"></script>
+<h1>ROCK-PAPER-SCISSORS GAME</h1>
+
+<h2>Choose your weapon!:</h2>
+  <div class="playzone">
+
+  <div class="userPlayzone">
+    
+    <div class="userButtons">
+    <button class="rockButton"><img src="./images/stone.png" alt="rock"></button>
+    <button class="paperButton"><img src="./images/paper.png" alt="paper"></button>
+    <button class="scissButton"><img src="./images/scissors.png" alt="scissors"></button>
+    </div> 
+
+    <div class="userScore">
+      <p id="userScore">0</p>
+    </div>
+
+  </div>   
+
+  <div class="opponentPlayzone">
+
+    <div class="opponentScore">
+      <p id="opponentScore">0</p>
+    </div>
+
+    <div class="opponentButtons">
+      <button><img src="./images/stone.png" alt="rock"></button>
+      <button><img src="./images/paper.png" alt="paper"></button>
+      <button><img src="./images/scissors.png" alt="scissors"></button>
+      </div> 
+
+   
+  </div>
+
+</div>
+
+<script src="rocketpaper.js"></script>
+
+</body>
+
 
 </html>

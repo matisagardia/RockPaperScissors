@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.playzone {
+    height: 80vh;
+    width: 70vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.userPlayzone {
+    height: 80vh;
+    width: 50vh;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.opponentPlayzone {
+    height: 80vh;
+    width: 50vh;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.userButtons img, .opponentButtons img {
+    width: 100px;
+    height: 100px;
+}
+
+.userButtons, .opponentButtons {
+    display: flex;
+    gap: 25px;
+}
+
+.opponentScore, .userScore {
+    font-size: 82px;
+
+}
