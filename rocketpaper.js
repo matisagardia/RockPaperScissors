@@ -2,14 +2,9 @@
 
 let userCount = 0;
 let computerCount = 0;
-
-
-// Funcion que contiene el juego de una ronda
-
-    
-// Traigo los valores del html (botones), los guardo en variables y espero el click en alguno. Una vez que tengo el evento, guardo el string correspondiente e inicio la partida.
-
 let userChoice = '';
+    
+// Traigo los valores del html (botones), los guardo en variables y espero el click en alguno.
 
 const rock = document.querySelector('.rockButton');
 rock.addEventListener('click', e => {
@@ -27,11 +22,9 @@ scissors.addEventListener('click', e => {
   playRound();
 });
 
+// Funcion que juega una ronda
+
 function playRound() {
-    
-      for (let index = 1; index < 6; index++) {
-      
-        console.log('Round' + ' ' + index + '/' + '5');
         
 // Funcion que genera un valor aleatorio para la eleccion de la computadora
 
@@ -46,7 +39,7 @@ function playRound() {
         }
       }
 
-// Creo dos variables para almacenar los resultados de las funciones anteriores, tanto del ingreso del usuario como el random de la pc. 
+// Almaceno la eleccion de la pc en una variable.
 // Creo otras dos variables para almacenar los strings de los resultados, para luego poder usarlos en el contador de rondas ganadas por cada uno.
 
       let computerChoice = getComputerChoice();
@@ -93,7 +86,7 @@ function playRound() {
     opponentScore.textContent = computerCount;
 
     }
-  }
+
 
  
 
