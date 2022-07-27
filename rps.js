@@ -1,5 +1,6 @@
 // Declaro dos variables 0 para luego acumular resultados
 
+let totalRounds = 0;
 let userCount = 0;
 let computerCount = 0;
 let userChoice = '';
@@ -25,7 +26,11 @@ scissors.addEventListener('click', e => {
 // Funcion que juega una ronda
 
 function playRound() {
-        
+
+  // Contador de rondas
+
+      if(totalRounds < 6) {
+
 // Funcion que genera un valor aleatorio para la eleccion de la computadora
 
       function getComputerChoice() {
@@ -85,6 +90,10 @@ function playRound() {
     userScore.textContent = userCount;
     opponentScore.textContent = computerCount;
 
+    totalRounds++;
+
+     
+    }
     }
 
 
