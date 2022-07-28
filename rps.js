@@ -94,11 +94,16 @@ let currentWinner = document.getElementById('currentWinner');
     opponentScore.textContent = computerCount;
 
     totalRounds++;
-
      
     } else {
       currentWinner.textContent = 'Game Over!';
+      const reload = document.querySelector('.reload');
+      reload.style.visibility = 'visible';
+      reload.addEventListener('click', e => {
+        location.reload();
+      })
     }
+
     }
 
 

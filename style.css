@@ -36,9 +36,12 @@ h1, h2{
 
 .score {
     color: white;
-    text-align: center;
-    margin-top: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 22px;
+    text-align: center;
+    margin-top: 75px;
 }
 
 #currentWinner {
@@ -49,12 +52,22 @@ h1, h2{
 }
 
 .playzone {
-    height: 80vh;
+    height: 500px;
     width: 80vw;
     display: flex;
     justify-content: space-evenly;
     margin: auto;
-    margin-top: -330px;
+    margin-top: -300px;
+}
+
+.reload {
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    visibility: hidden;
 }
 
 .userPlayzone {
@@ -99,4 +112,16 @@ h1, h2{
 .opponentScore, .userScore {
     font-size: 82px;
     color: white;
+}
+
+.rules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rules p {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
 }
