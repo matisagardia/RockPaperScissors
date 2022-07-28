@@ -1,2 +1,2 @@
 # javascript
-On this repo I will work with Javascript concepts
+Rock Paper Scissors Game
